@@ -14,5 +14,33 @@
             android:theme="@style/AppTheme.AppBarOverlay"
             app:layout_constraintTop_toTopOf="parent"
     >
+        <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_weight="1"
+                android:background="?attr/colorPrimary"
+                app:popupTheme="@style/AppTheme.PopupOverlay"
+                app:layout_scrollFlags="scroll|enterAlways"/>
     </android.support.design.widget.AppBarLayout>
+    <android.support.v4.view.ViewPager
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toBottomOf="@+id/appbar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_behaviour="@string/appbar_scrolling_view_behaviour" tools:layout_editor_absoluteX="0dp"
+            app:layout_constraintVertical_bias="0.0"/>
+    <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompt="@drawable/new_chat"
+            app:layout_constraintEnd_toEndOf="@+id/appbar"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"/>
 </android.support.constraint.ConstraintLayout>
